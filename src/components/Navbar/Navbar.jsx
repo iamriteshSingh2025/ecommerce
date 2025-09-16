@@ -7,7 +7,7 @@ const NavBar = () => {
   const { cartList } = useSelector((state) => state.cart);
   const [expand, setExpand] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
-  // fixed Header
+ 
   function scrollHandler() {
     if (window.scrollY >= 100) {
       setIsFixed(true);
@@ -16,12 +16,7 @@ const NavBar = () => {
     }
   }
   window.addEventListener("scroll", scrollHandler);
-  // useEffect(()=> {
-  //   if(CartItem.length ===0) {
-  //     const storedCart = localStorage.getItem("cartItem");
-  //     setCartItem(JSON.parse(storedCart));
-  //   }
-  // },[])
+
   return (
     <Navbar
       fixed="top"
@@ -33,7 +28,7 @@ const NavBar = () => {
           <ion-icon name="bag"></ion-icon>
           <h1 className="logo">Multimart</h1>
         </Navbar.Brand>
-        {/* Media cart and toggle */}
+        
         <div className="d-flex">
           <div className="media-cart">
             <svg
